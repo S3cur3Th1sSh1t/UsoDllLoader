@@ -49,35 +49,17 @@ bool MiniUsoClient::Run(UsoAction action)
 			{
 			case USO_STARTSCAN:
 				wprintf(L"    |__ Calling 'StartScan'... ");
-				System.Diagnostics.Process process = new System.Diagnostics.Process();
-				System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-				startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-				startInfo.FileName = "cmd.exe";
-				startInfo.Arguments = "/C usoclient StartScan";
-				process.StartInfo = startInfo;
-				process.Start();
+				system("cmd.exe /C usoclient StartScan");
 				wprintf(L"Done.\n");
 				break;
 			case USO_STARTDOWNLOAD:
 				wprintf(L"    |__ Calling 'StartDownload'... ");
-				System.Diagnostics.Process process = new System.Diagnostics.Process();
-				System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-				startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-				startInfo.FileName = "cmd.exe";
-				startInfo.Arguments = "/C usoclient StartDownload";
-				process.StartInfo = startInfo;
-				process.Start();
+				system("cmd.exe /C usoclient StartDownload");
 				wprintf(L"Done.\n");
 				break;
 			case USO_STARTINTERACTIVESCAN:
 				wprintf(L"    |__ Calling 'StartInteractiveScan'... ");
-				System.Diagnostics.Process process = new System.Diagnostics.Process();
-				System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-				startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-				startInfo.FileName = "cmd.exe";
-				startInfo.Arguments = "/C usoclient StartInteractiveScan";
-				process.StartInfo = startInfo;
-				process.Start();
+				system("cmd.exe /C usoclient StartInteractiveScan");
 				wprintf(L"Done.\n");
 				break;
 			}
